@@ -1,6 +1,6 @@
 const express = require('express');
 
-//const hubsRouter = require('./hubs/hubs-router.js')
+const postsRouter = require('./routers/posts-router.js')
 
 const server = express();
 
@@ -13,8 +13,7 @@ server.get('/', (req, res) => {
   `);
 });
 
-//server.use('/api/hubs', hubsRouter)
+server.use('/api/posts', postsRouter)
 
-//export default server; would work if ES2015 but node dosnt like this
 
 module.exports = server //commonjs module syntax
