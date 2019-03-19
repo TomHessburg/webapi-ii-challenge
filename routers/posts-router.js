@@ -1,7 +1,10 @@
 const express = require('express')
 
+    //importing the access points to the database
 const Posts = require('../data/db.js');
 
+    //we need the express Router to make this all work. instead of calling server.whatever,
+    //we call router.whatever now
 const router = express.Router();
 
 router.post('/', (req, res) => {
@@ -73,4 +76,4 @@ router.put('/:id', (req,res) => {
 
 })
 
-  module.exports = router;
+module.exports = router;
